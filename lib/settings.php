@@ -4,8 +4,20 @@ $nazoma_settings = array(
 
     array(
         "group" => "nazoma-settings-group",
+        "name" => "nazoma_site_header_title_coloured",
+        "name-clean" => "Site heading title coloured",
+        "type" => "text"
+    ),
+    array(
+        "group" => "nazoma-settings-group",
         "name" => "nazoma_site_header_title",
-        "name-clean" => "Site heading title",
+        "name-clean" => "Site heading title uncoloured",
+        "type" => "text"
+    ),
+    array(
+        "group" => "nazoma-settings-group",
+        "name" => "nazoma_site_header_tagline",
+        "name-clean" => "Site heading tagline",
         "type" => "text"
     ),
     array(

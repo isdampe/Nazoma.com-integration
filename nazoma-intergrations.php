@@ -17,3 +17,4 @@ require_once 'lib/post-types.php';
 require_once 'lib/custom-fields-pre.php';
 require_once 'lib/settings.php';
 require_once 'lib/hooks.php';
+require_once 'lib/helpers.php';
