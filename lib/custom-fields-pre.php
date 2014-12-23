@@ -97,4 +97,114 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
+	register_field_group(array (
+		'id' => 'acf_home_side',
+		'title' => 'Home sidebar',
+		'fields' => array(
+			array(
+				'key' => 'field_78y678gh987gh',
+				'label' => 'Background image',
+				'name' => 'background_image',
+				'type' => 'image',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'front_page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default'
+		),
+		'menu_order' => 0,
+	));
+
+		register_field_group(array (
+		'id' => 'acf_home',
+		'title' => 'Home',
+		'fields' => array (
+			array (
+				'key' => 'field_5499511f28a20',
+				'label' => 'Left column',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_5499512728a21',
+				'label' => 'Title',
+				'name' => 'left_column_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5499513628a22',
+				'label' => 'Content',
+				'name' => 'left_column_content',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_5499514128a23',
+				'label' => 'Right column',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_5499514a28a24',
+				'label' => 'Title',
+				'name' => 'right_column_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5499515428a25',
+				'label' => 'Content',
+				'name' => 'right_column_content',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'front_page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+
 }
