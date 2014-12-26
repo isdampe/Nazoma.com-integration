@@ -22,3 +22,5 @@ function nazoma_hide_fields() {
 	</style>';
 }
 add_action( 'admin_head', 'nazoma_hide_fields' );
+
+add_theme_support( 'post-thumbnails' ); 

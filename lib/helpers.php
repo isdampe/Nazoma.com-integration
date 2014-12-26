@@ -14,3 +14,8 @@ function nazoma_get_setting( $settingname, $default="Nazoma", $echo=true ) {
 	}
 
 }
+
+function custom_excerpt_length( $length ) {
+	return 14;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
