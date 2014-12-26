@@ -208,7 +208,7 @@ if (!class_exists('WPPaginate')) {
 			else {
 				$css = $this->pluginurl . $name;
 			}
-			wp_enqueue_style('wp-paginate', $css, false, $this->version, 'screen');
+			
 
 			if (function_exists('is_rtl') && is_rtl()) {
 				$name = "wp-paginate-rtl.css";
@@ -218,7 +218,7 @@ if (!class_exists('WPPaginate')) {
 				else {
 					$css = $this->pluginurl . $name;
 				}
-				wp_enqueue_style('wp-paginate-rtl', $css, false, $this->version, 'screen');
+				
 			}
 		}
 
