@@ -37,6 +37,12 @@ $nazoma_settings = array(
         "name" => "nazoma_head_meta",
         "name-clean" => "Extra meta to be injected into <pre><code>&lt;head&gt;</code></pre>",
         "type" => "textarea"
+    ),
+    array(
+        "group" => "nazoma-settings-group",
+        "name" => "nazoma_301",
+        "name-clean" => "List of 301's to perform on the site.<pre><code>http://original.com/hello::::http://new.com/hello</code></pre>",
+        "type" => "textarea"
     )
 
 );
@@ -77,14 +83,14 @@ function nazoma_settings_page() {
             <tr valign="top">
             <th scope="row"><?php echo $setting['name-clean']; ?></th>
             <td>
-                <?php 
+                <?php
                     $val = esc_attr( get_option($setting['name']) );
                     switch ( $setting['type'] ) {
                         case "text": ?>
 
                             <input type="text" name="<?php echo $setting['name']; ?>" value="<?php echo $val; ?>" />
 
-                        <?php break; 
+                        <?php break;
                         case "textarea": ?>
 
                             <textarea name="<?php echo $setting['name']; ?>" style="width:400px;height:180px;"><?php echo $val; ?></textarea>
@@ -92,15 +98,15 @@ function nazoma_settings_page() {
                         <?php break;
                     }
                 ?>
-                
+
             </td>
             </tr>
 
         <?php } ?>
-        
- 
+
+
     </table>
-    
+
     <?php submit_button(); ?>
 
 </form>
